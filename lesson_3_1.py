@@ -4,15 +4,12 @@
 """
 
 
-def dec(a, b):
+def dec(num_1, num_2):
     result = 'divide by zero'
-    if b != 0:
-        result = a / b
+    if num_2 != 0:
+        result = num_1 / num_1
     return result
 
-
-a = 0
-b = 0
 
 a = int(input("Введите число a: "))
 b = int(input("Введите число b: "))
