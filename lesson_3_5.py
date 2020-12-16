@@ -22,13 +22,13 @@ def sum_of_series(str_row, symbol='q'):
 
 
 spec_symbol = 'q'
-sum = 0
+sum_of_row = 0
 
 while True:
     row = input('Введите строку чисел (если хотите прекратить, то в строке укажите символ "{}": '.format(spec_symbol))
-    sum += sum_of_series(row, spec_symbol)
+    sum_of_row += sum_of_series(row, spec_symbol)
 
-    print('Сумма элементов ряда (с учетом предыдущих вычислений: {}'.format(sum))
+    print('Сумма элементов ряда (с учетом предыдущих вычислений: {}'.format(sum_of_row))
 
     if spec_symbol in row:
         break
