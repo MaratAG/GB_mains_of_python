@@ -4,25 +4,21 @@
 При решении задания необходимо обойтись без встроенной функции возведения числа в степень.
 """
 
-def rez(var1, var2):
-    var1 = input("Введите делимое ")
-    if not var1.isdigit():
-        return 'введенные данные не являются числом'
-    else:
-        var1 = float(var1)
-    var2 = input("Введите делитель ")
-    if not var2.isdigit():
-        return 'введенные данные не являются числом'
-    else:
-        var2 = float(var2)
-    if var2 == 0:
-        return 'делить на 0 нельзя'
-    q = input('Хотите узнать результат (да/нет)) ')
-    if q.lower() == 'да':
-        return var1/var2
-    else:
-        return 'удачи!'
-    rez = var1 / var2
-    return rez
 
-print(rez(var1=0, var2=0))
+def increase_x_y(x, y):
+    """Возвести число x в степень y."""
+    result = 1
+    iterations = abs(y)
+    for iteration in range(iterations):
+        result *= x
+    if y < 0:
+        result = 1 / result
+
+    return result
+
+
+x = float(input('Введите действительное положительное число x: '))
+y = int(input('Введите степень y (целое положительное число), в которую нужно возвести x: '))
+
+print('Результат, вычисленный с помощью алгоритма: {:.6f}'.format(increase_x_y(x, y)))
+print('Результат, вычисленный с помощью встроенной функции: {:.6f}'.format(x ** y))
