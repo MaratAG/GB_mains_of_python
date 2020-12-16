@@ -4,4 +4,25 @@
 При решении задания необходимо обойтись без встроенной функции возведения числа в степень.
 """
 
-d
+def rez(var1, var2):
+    var1 = input("Введите делимое ")
+    if not var1.isdigit():
+        return 'введенные данные не являются числом'
+    else:
+        var1 = float(var1)
+    var2 = input("Введите делитель ")
+    if not var2.isdigit():
+        return 'введенные данные не являются числом'
+    else:
+        var2 = float(var2)
+    if var2 == 0:
+        return 'делить на 0 нельзя'
+    q = input('Хотите узнать результат (да/нет)) ')
+    if q.lower() == 'да':
+        return var1/var2
+    else:
+        return 'удачи!'
+    rez = var1 / var2
+    return rez
+
+print(rez(var1=0, var2=0))
