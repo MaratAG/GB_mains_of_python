@@ -5,12 +5,10 @@
 """
 
 
-def user_info(**data):
+def user_info(name, lastname, birth, city, email, phone):
     """Выводим данные о пользователе одной строкой."""
-    message = 'Данные пользователя - '
-    for key, item in data.items():
-        message += '{}: {}, '.format(key, item)
-    print(message[:-2])
+    print('Пользователь {} {}, дата рождения -  {}, город - {}, email - {}, телефон - {}'.
+          format(name, lastname, birth, city, email, phone))
 
 
 user_data = []
