@@ -6,5 +6,5 @@ start_number = 20
 finish_number = 240
 multiple = 20
 
-output_list = [item for item in range(start_number, finish_number + 1) if item % multiple == 0]
+output_list = [item for item in range(start_number, finish_number) if item % multiple == 0]
 print(output_list)
