@@ -4,6 +4,7 @@
 средней величины дохода сотрудников.
 """
 
+
 min_wage = 20000
 wage_fund = 0
 count_employees = 0
