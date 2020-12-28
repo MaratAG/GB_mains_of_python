@@ -8,9 +8,15 @@
 min_wage = 20000
 wage_fund = 0
 count_employees = 0
+file_name = 'wage_file.txt'
 
-with open('wage_file.txt', 'r') as wage_file:
-    for line in wage_file:
+try:
+    with open(file_name, 'r') as wage_file:
+        strings = wage_file.readlines()
+except FileNotFoundError:
+    print(f'Файл {file_name} не найден!')
+else:
+    for line in strings:
         wage_data = line.split()
 
         if len(wage_data) == 2:
