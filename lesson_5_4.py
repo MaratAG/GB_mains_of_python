@@ -32,3 +32,4 @@ else:
             if rus_numeric is not None:
                 words[0] = rus_numeric.title()
                 output_file.write(f"{' '.join(words)}\n")
+        print(f'Создан файл {output_file_name}')
