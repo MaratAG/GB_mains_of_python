@@ -21,7 +21,7 @@ class Road:
         :param specific_weight: масса асфальта для покрытия одного метра дороги (в кг).
         :param depth_of_road: толщина дорожного полотнка в см.
 
-        :return: необходимое количество асфальта в тоннах.
+        :return необходимое количество асфальта в тоннах.
          """
 
         costs_of_asphalt = (self._length * self._width * specific_weight * (depth_of_road / 100)) / 1000
